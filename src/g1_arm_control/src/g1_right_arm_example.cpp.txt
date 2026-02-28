@@ -1,0 +1,21 @@
+关节运动——绝对运动
+
+ros2 topic pub /right_arm/joint_commands sensor_msgs/msg/JointState "{position: [0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0]}" -1
+
+
+# -1 表示只发布一次消息
+ros2 topic pub /right_arm/joint_commands sensor_msgs/msg/JointState "{position: [0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0]}" -1
+
+
+机器人开机
+ping
+source ~/unitree_ros2/setup.sh 
+source install/setup.bash 
+ros2 run g1_arm_control g1_right_arm_example ./   ———启动节点以后，机器人的手臂会自然下垂
+
+
+新开终端
+source ~/unitree_ros2/setup.sh 
+source install/setup.bash 
+ros2 topic pub /right_arm/joint_commands sensor_msgs/msg/JointState "{position: [0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0]}" -1
+

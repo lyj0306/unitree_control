@@ -1,0 +1,7 @@
+build/
+install/
+log/
+*.zip
+*.tar.gz
+*.deb
+*.mp4
